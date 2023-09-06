@@ -51,7 +51,7 @@ def snippet_delete(request, snippet_id):
     if snippet.created_by_id != request.user.id:
         return HttpResponseForbidden("このスニペットの削除は許可されていません。")
 
-    return redirect('snippet_detail', snippet_id=snippet_id)
+    return redirect('top')
     # if request.method == "POST":
     #     form = SnippetForm(request.POST, instance=snippet)
     #     if form.is_valid():
