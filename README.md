@@ -1,15 +1,7 @@
-# practice-python
-```
-python manage.py runserver
-sqlite3 db.sqlite3
-python manage.py migrate
-python manage.py makemigrations
-python manage.py migrate
-```
-## memo
-```
-which プログラム名
-パスを通す
-あとはエラー文
-とかは環境構築がうまくいかない時に調べるいいかも？
-```
+# post_snippets
+ 
+##概要説明・機能
+エンジニア学習の一環として書籍を参考に作成しました。
+機能としては、ユーザーの作成、登録、snippetの投稿・編集、他ユーザーの投稿の観覧が可能になっています。
+
+##使用環境
