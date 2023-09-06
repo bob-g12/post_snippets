@@ -16,7 +16,25 @@ Windows / Python / Django / Sqlite3
 ユーザー登録しなくても投稿の観覧は可能です。<br>
 ユーザー登録することでスニペットの投稿、修正が可能になります。
 
+## 参考画像
+### トップページ
+<p>スニペット情報をDBから取得し、一覧表示</p>
+<img width="800" alt="image" src="https://github.com/bob-g12/post_snippets/assets/126374166/9d34a6dc-2e72-4dca-8888-f168e4d3a72f">
+
+### 会員登録
+<p>DBに新たなユーザー情報を追加</p>
+<img width="800" alt="image" src="https://github.com/bob-g12/post_snippets/assets/126374166/41dcded6-6a76-44c5-b045-3a363b7edeba">
+
+### ログイン画面
+<p> 認証機能 </p>
+<img width="800" alt="image" src="https://github.com/bob-g12/post_snippets/assets/126374166/486ab09b-a697-4a67-bcf3-64512c17dcb2">
+
+### 投稿画面
+<p>投稿内容をDBへ追加</p>
+<img width="800" alt="image" src="https://github.com/bob-g12/post_snippets/assets/126374166/276cb520-9fcc-422b-98e9-66ab99ad7b66">
 
 
-## 今後の計画
-このアプリケーションを参考に新たなアプリケーションを作っていきたいです。
+
+
+
+
