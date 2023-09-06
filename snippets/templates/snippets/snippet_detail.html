@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load pygmentize %}
+{% load django_bootstrap5 %}
 
 {% block extraheader %}
 <style>{% pygments_css %}</style>
@@ -12,6 +13,11 @@
     投稿日: {{ snippet.created_at|date:"DATETIME_FORMAT" }}
     {% if user.is_authenticated and snippet.created_by_id == user.id %}
     <a href="{% url 'snippet_edit' snippet.id %}">編集</a>
+    <a href="{% url 'snippet_delete' snippet.id %}">削除</a>
+    <!-- <form method="post">
+        {% csrf_token %}
+        {% bootstrap_button button_type="submit" content="削除" %}
+    </form> -->
     {% endif %}
 </div>
 

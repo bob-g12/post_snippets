@@ -28,11 +28,13 @@ def snippet_new(request):
 
 @login_required
 def snippet_edit(request, snippet_id):
+    print("snippet_idsnippet_idsnippet_id:", snippet_id)
     snippet = get_object_or_404(Snippet, pk=snippet_id)
     if snippet.created_by_id != request.user.id:
         return HttpResponseForbidden("このスニペットの編集は許可されていません。")
 
     if request.method == "POST":
+        print("本当に飛んでんのか？お？")
         form = SnippetForm(request.POST, instance=snippet)
         if form.is_valid():
             form.save()
@@ -40,6 +42,24 @@ def snippet_edit(request, snippet_id):
     else:
         form = SnippetForm(instance=snippet)
     return render(request, 'snippets/snippet_edit.html', {'form': form})
+
+@login_required
+def snippet_delete(request, snippet_id):
+    print("snippet_delete")
+    print("snippet_id:", snippet_id)
+    snippet = get_object_or_404(Snippet, pk=snippet_id)
+    if snippet.created_by_id != request.user.id:
+        return HttpResponseForbidden("このスニペットの削除は許可されていません。")
+
+    return redirect('snippet_detail', snippet_id=snippet_id)
+    # if request.method == "POST":
+    #     form = SnippetForm(request.POST, instance=snippet)
+    #     if form.is_valid():
+    #         form.save()
+    #         return redirect('snippet_detail', snippet_id=snippet_id)
+    # else:
+    #     form = SnippetForm(instance=snippet)
+    # return render(request, 'snippets/snippet_edit.html', {'form': form})
 
 
 def snippet_detail(request, snippet_id):
